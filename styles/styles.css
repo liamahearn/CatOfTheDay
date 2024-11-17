@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    background-image: url("../assets/backgrounds/tilingBG1Medium.png");
-    animation-name: vertical-scroll;
+    /*background-image: url("../assets/backgrounds/tilingBG1Medium.png");*/
+    /*animation-name: vertical-scroll;*/
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -19,6 +19,20 @@ body {
 
 }
 
+@keyframes diagonal-scroll {
+
+    0% {
+        background-position-y: 0;
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-y: 626px;
+        background-position-x: 626px;
+    }
+
+}
+
 main {
     width: 100vw;
     height: 100vh;
@@ -28,6 +42,9 @@ main {
     animation-delay: 2.5s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+
+    perspective: 800px;
+    perspective-origin: center;
 }
 
 @keyframes BG {
@@ -118,6 +135,12 @@ main {
 }
 
 .picture-frame {
+
+    scale: 0.9;
+
+    height: 525px;
+    width: 525px;
+
     position: absolute;
     left: -640px;
     bottom: 40px;
@@ -136,6 +159,8 @@ main {
 }
 
 .dark-div {
+
+    scale: 0.9;
 
     height: 525px;
     width: 525px;
