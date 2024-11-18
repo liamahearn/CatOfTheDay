@@ -21,9 +21,44 @@ let entries = [
         source: "Lynne Davies, Alexandria",
         background: "tilingBG3Square.png",
         backgroundAnimation: "diagonal-scroll",
-        animationDuration: "10s",
-    }
+        animationDuration: "15s",
+    },
+    {
+        picture: "cat4.png",
+        emoji: "🐶",
+        source: "Sam B.",
+        background: "tilingBG4Medium.png",
+        backgroundAnimation: "horizontal-scroll",
+        animationDuration: "5s",
+    },
+    {
+        picture: "cat5.png",
+        emoji: "😑",
+        source: "Sam B.",
+        background: "tilingBG5Medium.png",
+        backgroundAnimation: "horizontal-scroll",
+        animationDuration: "5s",
+    },
+    {
+        picture: "cat6.png",
+        emoji: "😉",
+        source: "me",
+        background: "tilingBG6Square.png",
+        backgroundAnimation: "diagonal-scroll",
+        animationDuration: "15s",
+    },
+    {
+        picture: "dog1.png",
+        emoji: "⁉️",
+        source: "Megan W.",
+        background: "tilingBG7Square.png",
+        backgroundAnimation: "diagonal-scroll",
+        animationDuration: "15s",
+    },
+
 ]
+
+// Audio
 
 let played  = false;
 var intro = new Audio('./assets/audio/introDrumroll.m4a');
@@ -41,12 +76,13 @@ intro.onended = () => {
     impact.play();
 }
 
+// Audio (end)
+
 window.addEventListener("load", (event) => {
     console.log("Page loaded");
 
-    // select day
-    let day = Math.floor(Math.random() * entries.length);
-    console.log(day);
+    //let day = Math.floor(Math.random() * entries.length);
+    let day = 6;
     let entry = entries[day];
    
     document.querySelector(".picture-frame").src = `./assets/cats/${entry.picture}`;

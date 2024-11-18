@@ -19,6 +19,18 @@ body {
 
 }
 
+@keyframes horizontal-scroll {
+
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 144px;
+    }
+
+}
+
 @keyframes diagonal-scroll {
 
     0% {
@@ -153,7 +165,8 @@ main {
     
     background-color: #2a2a2a;
     border-radius: 100px;
-    border: 8px solid black;
+    /*border: 8px solid black;*/
+    border: 8px solid white;
     
     animation-fill-mode: forwards;
 }
@@ -214,6 +227,7 @@ main {
         left: calc(95% - 565px);
         bottom: 40px;
         transform: rotate3d(1, -33, 3, 30deg);
+        border: 8px solid black;
     }
 
     100% {
@@ -221,6 +235,7 @@ main {
         bottom: 40px;
         transform: rotate3d(1, -33, 3, 30deg);
         border-radius: 100px;
+        border: 8px solid white;
     }   
 
 }
